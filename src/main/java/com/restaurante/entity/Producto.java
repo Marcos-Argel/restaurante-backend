@@ -36,17 +36,25 @@ public class Producto {
     @Column(name = "tiempo_preparacion")
     private Integer tiempoPreparacion;
 
+    // --- CORRECCIONES CON @Builder.Default ---
+
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private EstadoProducto estado = EstadoProducto.ACTIVO;
 
+    @Builder.Default
     @Column(name = "es_preparado")
     private Boolean esPreparado = true;
 
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 
+    @Builder.Default
     @Column(name = "fecha_actualizacion")
     private LocalDateTime fechaActualizacion = LocalDateTime.now();
+
+    // --- FIN DE CORRECCIONES ---
 
     public enum EstadoProducto {
         ACTIVO, INACTIVO, AGOTADO

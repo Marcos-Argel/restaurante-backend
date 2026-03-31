@@ -37,8 +37,12 @@ public class Proveedor {
     @Column(name = "contacto_nombre", length = 100)
     private String contactoNombre;
 
+    // --- CORRECCIÓN: Evita proveedores inactivos por defecto al usar Builder ---
+    @Builder.Default
     private Boolean activo = true;
 
+    // --- CORRECCIÓN: Garantiza el timestamp de creación ---
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 }

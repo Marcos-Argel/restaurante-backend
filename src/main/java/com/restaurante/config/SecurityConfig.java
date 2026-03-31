@@ -75,6 +75,11 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/productos/menu").permitAll()
+
+                        // --- PUERTA ABIERTA TEMPORAL PARA CREAR AL ADMIN ---
+                        .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll()
+
+                        // Reglas restrictivas (vienen después)
                         .requestMatchers("/api/usuarios/**").hasAnyRole("ADMIN", "GERENTE")
                         .requestMatchers("/api/roles/**").hasAnyRole("ADMIN", "GERENTE")
                         .requestMatchers("/api/reportes/**").hasAnyRole("ADMIN", "GERENTE")

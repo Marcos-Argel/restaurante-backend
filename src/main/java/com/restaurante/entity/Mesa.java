@@ -28,9 +28,13 @@ public class Mesa {
     @Column(length = 100)
     private String descripcion;
 
+    // --- CORRECCIÓN: Garantiza que la mesa no nazca con estado NULL ---
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private EstadoMesa estado = EstadoMesa.LIBRE;
 
+    // --- CORRECCIÓN: Asegura la marca de tiempo al usar el Builder ---
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 

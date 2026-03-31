@@ -21,8 +21,14 @@ public class Categoria {
     @Column(columnDefinition = "TEXT")
     private String descripcion;
 
+    // --- CORRECCIONES CON @Builder.Default ---
+
+    @Builder.Default
     @Column(name = "orden_menu")
     private Integer ordenMenu = 0;
 
+    @Builder.Default
     private Boolean activo = true;
+
+    // --- FIN DE CORRECCIONES ---
 }

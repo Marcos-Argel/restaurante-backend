@@ -1,14 +1,6 @@
 # ===== Build Maven =====
-FROM maven:3.9.6-eclipse-temurin-17 AS build
-WORKDIR /app
-COPY pom.xml .
-RUN mvn dependency:go-offline -B
-COPY src ./src
-RUN mvn clean package -DskipTests
-
-# ===== Ejecutar JAR =====
-FROM eclipse-temurin:17-jre-alpine
-WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+FROM eclipse-temurin:21-jdk-jammy
+ARG JAR_FILE=target/restaurante-backend-1.0.0.jar
+COPY ${JAR_FILE} restaurante-backend.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "restaurante-backend.jar"]

@@ -22,6 +22,8 @@ public class Rol {
     @Column(length = 255)
     private String descripcion;
 
+    // --- CORRECCIÓN: Asegura que el timestamp se genere al usar el Builder ---
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 }

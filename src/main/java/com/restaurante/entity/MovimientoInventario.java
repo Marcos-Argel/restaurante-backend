@@ -44,6 +44,8 @@ public class MovimientoInventario {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    // --- CORRECCIÓN: Garantiza la marca de tiempo exacta del movimiento ---
+    @Builder.Default
     private LocalDateTime fecha = LocalDateTime.now();
 
     public enum TipoMovimiento {

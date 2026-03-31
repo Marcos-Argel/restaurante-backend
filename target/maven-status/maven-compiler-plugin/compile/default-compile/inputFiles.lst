@@ -1,70 +1,70 @@
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\ProveedorController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\UsuarioService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\RecetaController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\ReporteController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\dto\AuthDTO.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\exception\BusinessException.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\InventarioService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Compra.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\MesaController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\PedidoRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\CompraController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\dto\PedidoDTO.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Producto.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\DetalleCompra.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\ReservaRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\CategoriaRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\dto\UsuarioDTO.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\MovimientoInventarioRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\PedidoService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\InventarioController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\config\SecurityConfig.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\RolController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Mesa.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\FacturaRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\ProductoIngrediente.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\MovimientoInventario.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\dto\FacturaDTO.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Factura.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\TurnoCajaService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\ProductoController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Categoria.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\TurnoCajaController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\DetallePedidoRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\ProductoRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\DetalleCompraRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\TurnoCajaRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\MesaRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\StockProducto.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Reserva.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\CompraRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\ProductoService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\RestauranteApplication.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\ProveedorRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\AuthController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\CategoriaController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\CompraService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\DetallePedido.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\PedidoController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\dto\ApiResponse.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\UsuarioRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\security\UserDetailsServiceImpl.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\UsuarioController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\exception\ResourceNotFoundException.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\ProductoIngredienteRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\exception\GlobalExceptionHandler.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\InventarioRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\AuthService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Rol.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\TurnoCaja.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\security\JwtAuthFilter.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Inventario.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\service\FacturaService.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\RolRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\ReservaController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\repository\StockProductoRepository.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Pedido.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Proveedor.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\controller\FacturaController.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\entity\Usuario.java
-C:\programacion\Proyecto del Restaurante\restaurante-backend\src\main\java\com\restaurante\security\JwtUtils.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Mesa.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/TurnoCajaService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/ProductoIngrediente.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/UsuarioController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/dto/FacturaDTO.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/DetalleCompraRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/dto/ApiResponse.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Pedido.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/CompraController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/TurnoCajaRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/RolController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/InventarioService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/StockProducto.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/DetallePedido.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Compra.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/CategoriaRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/security/UserDetailsServiceImpl.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/InventarioRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/UsuarioRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/CompraRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/ProductoIngredienteRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/RecetaController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/CompraService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/MovimientoInventario.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/CategoriaController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/RestauranteApplication.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/ReservaController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/exception/GlobalExceptionHandler.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Proveedor.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/StockProductoRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Reserva.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Usuario.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/FacturaController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/PedidoController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/DetalleCompra.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/FacturaService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/MesaController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/dto/PedidoDTO.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/RolRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/PedidoService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/dto/UsuarioDTO.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/ProductoController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/ReporteController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Producto.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/DetallePedidoRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/ProductoRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/TurnoCajaController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/MovimientoInventarioRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/security/JwtUtils.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/MesaRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/TurnoCaja.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/security/JwtAuthFilter.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/UsuarioService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/PedidoRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/config/SecurityConfig.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/InventarioController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Inventario.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/exception/ResourceNotFoundException.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/ProveedorController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Categoria.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/FacturaRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/AuthService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Rol.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/ReservaRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/entity/Factura.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/repository/ProveedorRepository.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/service/ProductoService.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/dto/AuthDTO.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/controller/AuthController.java
+/mnt/c/Users/Usuario/Pictures/api_restaurante/restaurante-backend/src/main/java/com/restaurante/exception/BusinessException.java
