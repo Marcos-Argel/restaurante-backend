@@ -2,19 +2,26 @@ package com.restaurante.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 public class AuthDTO {
 
     @Data
+    @NoArgsConstructor // Vital para que Jackson pueda instanciar el DTO
+    @AllArgsConstructor
     public static class LoginRequest {
-        @NotBlank @Email
+        @NotBlank(message = "El email es obligatorio")
+        @Email(message = "Formato de email inválido")
         private String email;
-        @NotBlank
+
+        @NotBlank(message = "La contraseña es obligatoria")
         private String password;
     }
 
     @Data
+    @NoArgsConstructor
     public static class LoginResponse {
         private String token;
         private String tipo = "Bearer";
