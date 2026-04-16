@@ -24,23 +24,31 @@ public class Compra {
     @Column(name = "numero_factura", length = 50)
     private String numeroFactura;
 
+    // --- CORRECCIONES CON @Builder.Default ---
+
+    @Builder.Default
     private LocalDateTime fecha = LocalDateTime.now();
 
-    @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal subtotal;
-
+    @Builder.Default
     @Column(precision = 10, scale = 2)
     private BigDecimal impuesto = BigDecimal.ZERO;
 
-    @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal total;
-
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @Column(name = "metodo_pago")
     private MetodoPagoCompra metodoPago = MetodoPagoCompra.EFECTIVO;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private EstadoCompra estado = EstadoCompra.PENDIENTE;
+
+    // --- FIN DE CORRECCIONES ---
+
+    @Column(nullable = false, precision = 10, scale = 2)
+    private BigDecimal subtotal;
+
+    @Column(nullable = false, precision = 10, scale = 2)
+    private BigDecimal total;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id", nullable = false)

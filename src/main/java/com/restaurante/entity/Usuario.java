@@ -32,9 +32,13 @@ public class Usuario {
     @JoinColumn(name = "rol_id", nullable = false)
     private Rol rol;
 
+    // --- CORRECCIÓN: Sin esta anotación, el builder lo pondría en NULL o FALSE ---
+    @Builder.Default
     @Column
     private Boolean activo = true;
 
+    // --- CORRECCIÓN: Garantiza que la fecha se asigne al usar el Builder ---
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 

@@ -38,21 +38,30 @@ public class Pedido {
     @Column(name = "cliente_direccion", columnDefinition = "TEXT")
     private String clienteDireccion;
 
+    // --- CORRECCIONES CON @Builder.Default ---
+
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo_pedido")
     private TipoPedido tipoPedido = TipoPedido.MESA;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private EstadoPedido estado = EstadoPedido.PENDIENTE;
 
+    @Builder.Default
     @Column(precision = 10, scale = 2)
     private BigDecimal subtotal = BigDecimal.ZERO;
 
+    @Builder.Default
     @Column(precision = 10, scale = 2)
     private BigDecimal total = BigDecimal.ZERO;
 
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
+
+    // --- FIN DE CORRECCIONES ---
 
     @Column(name = "fecha_preparacion")
     private LocalDateTime fechaPreparacion;

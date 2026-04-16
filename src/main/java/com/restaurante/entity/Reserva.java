@@ -37,6 +37,8 @@ public class Reserva {
     @Column(name = "cantidad_personas", nullable = false)
     private Integer cantidadPersonas;
 
+    // --- CORRECCIÓN: Garantiza que la reserva nazca con estado CONFIRMADA ---
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     private EstadoReserva estado = EstadoReserva.CONFIRMADA;
 
@@ -54,6 +56,8 @@ public class Reserva {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "password", "reservas"})
     private Usuario usuario;
 
+    // --- CORRECCIÓN: Asegura el timestamp de registro ---
+    @Builder.Default
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion = LocalDateTime.now();
 

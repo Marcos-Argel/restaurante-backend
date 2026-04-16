@@ -1,14 +1,22 @@
-# ===== Build Maven =====
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+# Etapa 1: Construcción
+FROM maven:3.9.6-eclipse-temurin-21-jammy AS build
 WORKDIR /app
-COPY pom.xml .
-RUN mvn dependency:go-offline -B
-COPY src ./src
-RUN mvn clean package -DskipTests
 
-# ===== Ejecutar JAR =====
-FROM eclipse-temurin:17-jre-alpine
+# Copiamos el pom y el código fuente
+COPY pom.xml .
+COPY src ./src
+
+# Compilamos el proyecto saltando los tests para acelerar el deploy
+RUN mvn clean package -DskipTests -Dfile.encoding=UTF-8
+
+# Etapa 2: Ejecución
+FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+
+# Copiamos solo el JAR generado en la etapa anterior
+COPY --from=build /app/target/*.jar restaurante-backend.jar
+
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Optimizamos el inicio de Java para entornos de nube
+ENTRYPOINT ["java", "-Xmx512m", "-jar", "restaurante-backend.jar"]

@@ -3,7 +3,6 @@ package com.restaurante.config;
 import com.restaurante.security.JwtAuthFilter;
 import com.restaurante.security.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -22,7 +21,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Configuration
@@ -33,9 +31,6 @@ public class SecurityConfig {
 
     private final JwtAuthFilter jwtAuthFilter;
     private final UserDetailsServiceImpl userDetailsService;
-
-    @Value("${cors.allowed-origins}")
-    private String allowedOrigins;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -56,45 +51,66 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf(csrf -> csrf.disable())
-            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(auth -> auth
-                // Endpoints públicos
-                .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/productos/menu").permitAll()
-                // Administrador y Gerente
-                .requestMatchers("/api/usuarios/**").hasAnyRole("ADMIN", "GERENTE")
-                .requestMatchers("/api/roles/**").hasAnyRole("ADMIN", "GERENTE")
-                .requestMatchers("/api/reportes/**").hasAnyRole("ADMIN", "GERENTE")
-                // Inventario y compras
-                .requestMatchers("/api/inventario/**").hasAnyRole("ADMIN", "GERENTE")
-                .requestMatchers("/api/compras/**").hasAnyRole("ADMIN", "GERENTE")
-                .requestMatchers("/api/proveedores/**").hasAnyRole("ADMIN", "GERENTE")
-                // Cocina
-                .requestMatchers("/api/cocina/**").hasAnyRole("ADMIN", "GERENTE", "COCINERO")
-                // Turnos de caja
-                .requestMatchers("/api/turnos/**").hasAnyRole("ADMIN", "GERENTE", "CAJERO")
-                // El resto autenticado
-                .anyRequest().authenticated()
-            )
-            .authenticationProvider(authenticationProvider())
-            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
-    }
-
-    @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList(allowedOrigins.split(",")));
+        // IMPORTANTE: Permitir el origen de tu frontend en Render si es posible,
+        // o mantener "*" con precaución.
+        config.setAllowedOriginPatterns(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(List.of("*"));
+
+        // Headers explícitos para evitar bloqueos del navegador
+        config.setAllowedHeaders(List.of(
+                "Authorization",
+                "Content-Type",
+                "X-Requested-With",
+                "Accept",
+                "Origin",
+                "Access-Control-Request-Method",
+                "Access-Control-Request-Headers"
+        ));
+
+        config.setExposedHeaders(List.of("Authorization"));
         config.setAllowCredentials(true);
+        config.setMaxAge(3600L);
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return source;
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                // 1. CORS DEBE IR PRIMERO EN LA CADENA
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(session -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(auth -> auth
+                        // 2. PERMITIR OPTIONS EXPLÍCITAMENTE ANTES QUE NADA
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
+                        // 3. RUTAS PÚBLICAS
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/productos/menu").permitAll()
+                        //Permitir crear usuarios sin estar logueados
+                        .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll()
+                        // 4. SEGURIDAD POR ROLES
+                        .requestMatchers("/api/usuarios/**").hasAnyRole("ADMIN", "GERENTE")
+                        .requestMatchers("/api/roles/**").hasAnyRole("ADMIN", "GERENTE")
+                        .requestMatchers("/api/reportes/**").hasAnyRole("ADMIN", "GERENTE")
+                        .requestMatchers("/api/inventario/**").hasAnyRole("ADMIN", "GERENTE")
+                        .requestMatchers("/api/compras/**").hasAnyRole("ADMIN", "GERENTE")
+                        .requestMatchers("/api/proveedores/**").hasAnyRole("ADMIN", "GERENTE")
+                        .requestMatchers("/api/cocina/**").hasAnyRole("ADMIN", "GERENTE", "COCINERO")
+                        .requestMatchers("/api/turnos/**").hasAnyRole("ADMIN", "GERENTE", "CAJERO")
+
+                        .anyRequest().authenticated()
+                )
+                .authenticationProvider(authenticationProvider())
+                // 5. JWT FILTER DESPUÉS DE CORS PARA NO INTERFERIR EN PREFLIGHT
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
     }
 }
