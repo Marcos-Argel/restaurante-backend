@@ -93,7 +93,8 @@ public class SecurityConfig {
                         // 3. RUTAS PÚBLICAS
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/productos/menu").permitAll()
-
+                        //Permitir crear usuarios sin estar logueados
+                        .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll()
                         // 4. SEGURIDAD POR ROLES
                         .requestMatchers("/api/usuarios/**").hasAnyRole("ADMIN", "GERENTE")
                         .requestMatchers("/api/roles/**").hasAnyRole("ADMIN", "GERENTE")

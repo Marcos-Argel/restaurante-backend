@@ -1,4 +1,4 @@
-# ===== Etapa 1: Construcción (Maven) =====
+# Etapa 1: Construcción
 FROM maven:3.9.6-eclipse-temurin-21-jammy AS build
 WORKDIR /app
 
@@ -7,9 +7,9 @@ COPY pom.xml .
 COPY src ./src
 
 # Compilamos el proyecto saltando los tests para acelerar el deploy
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -Dfile.encoding=UTF-8
 
-# ===== Etapa 2: Ejecución (Imagen Ligera) =====
+# Etapa 2: Ejecución
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 

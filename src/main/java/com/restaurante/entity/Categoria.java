@@ -30,5 +30,4 @@ public class Categoria {
     @Builder.Default
     private Boolean activo = true;
 
-    // --- FIN DE CORRECCIONES ---
 }
