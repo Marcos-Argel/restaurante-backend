@@ -35,12 +35,19 @@ API REST para sistema de gestión de restaurante desarrollada con **Java 21** y 
 src/main/java/com/restaurante/
 
 ├── config/         # Configuración general
+├
 ├── controller/     # Endpoints REST
+├
 ├── dto/            # Data Transfer Objects
+├
 ├── entity/         # Entidades JPA
+├
 ├── exception/      # Manejo de errores
+├
 ├── repository/     # Acceso a datos
+├
 ├── security/       # JWT y Spring Security
+├
 └── service/        # Lógica de negocio
 
 ---
